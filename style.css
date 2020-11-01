@@ -1,0 +1,28 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+
+.wp-block-leketshibolim-plugins-leketshibolim-newsletter-subscription-form {
+    border: 1px dashed;
+    padding: 0 2rem 1rem;
+    margin-top: 4rem;
+}
+
+[for="mce-EMAIL"] {
+    font-weight: bold;
+}
+
+#mce-EMAIL {
+    margin: 0 0.5rem;
+}
+
+.mce-error-response,
+.mce-success-response {
+    display: none;
+}
+
+.captcha-hidden {
+    position: absolute;
+    text-indent: -5000px;
+}
