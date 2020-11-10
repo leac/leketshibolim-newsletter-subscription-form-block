@@ -33,7 +33,10 @@ function leketshibolim_newsletter_subscription_form_register_block() {
         // Gutenberg is not active.
         return;
     }
-    wp_enqueue_script('mailchimp-script', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', null, null, true);
+    if (!is_admin()) {
+        // Don't enqueue in admin because interferes with the WordPress Editorial Calendar plugin, and it's not needed there anyway
+        wp_enqueue_script('mailchimp-script', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', null, null, true);
+    }
 
     wp_register_script(
         'leketshibolim-newsletter-subscription-form',
