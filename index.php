@@ -41,7 +41,7 @@ function leketshibolim_newsletter_subscription_form_register_block() {
     wp_register_script(
         'leketshibolim-newsletter-subscription-form',
         plugins_url('block.js', __FILE__),
-        array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'underscore', 'mailchimp-script'),
+        array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'underscore'),
         filemtime(plugin_dir_path(__FILE__) . 'block.js')
     );
 
